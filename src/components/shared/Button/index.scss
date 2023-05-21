@@ -1,0 +1,16 @@
+.button {
+    cursor: pointer;
+    width: 100%;
+    border-radius: $border-radius-primary;
+    background-color: $primary-color;
+    padding: 15px;
+    color: $dark-grayish-cyan-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-disabled {
+        background-color: $light-grayish-cyan;
+        cursor: not-allowed;
+    }
+}

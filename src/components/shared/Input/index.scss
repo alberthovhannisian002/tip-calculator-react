@@ -1,0 +1,46 @@
+.input-container {
+    background-color: $light-grayish-cyan-2;
+    width: 100%;
+    height: 50px;
+    border-radius: $border-radius-primary;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    svg {
+       z-index: 1;
+       padding-left: 20px;
+       width: fit-content;
+    }
+
+    &--errored {
+        border: 2px solid red;
+    }
+
+    &--field {
+        position: absolute;
+        border: none;
+        right: 20px;
+        background-color: $light-grayish-cyan-2;
+        font-size: 24px;
+        text-align: right;
+        width: 80%;
+        outline: none;
+        color: $dark-grayish-cyan-2;
+    }
+
+    &--error {
+        color: red;
+        font-size: 18px;
+        position: absolute;
+        top: -25px;
+        right: 0;
+    }
+
+    &:focus-within {
+        border: 2px solid $primary-color;
+    }
+
+}

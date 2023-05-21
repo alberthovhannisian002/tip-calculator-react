@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+# Frontend Mentor - Tip calculator app solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+>`npm i`
 
-### `npm test`
+### Runing the app
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+>`npm run start`
 
-### `npm run build`
+### Linters
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Check the lintings
+>`npm run lint`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Fix lintings
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+>`npm run lint:fix`
 
-### `npm run eject`
+### Tests
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Test are written using jest
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- To run all test cases
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+>`npm run test`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### The challenge
 
-## Learn More
+Users should be able to:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Calculate the correct tip and total cost of the bill per person
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Screenshot
+
+- Desktop version
+
+![](./screenshot.png)
+
+- Mobile version
+
+![](./mobile.png)
+
+
+### Links
+
+- Live Site URL: [Check here](https://tip-calculator-app-react.surge.sh)
+
+## My process
+
+First of all I've create the application using CRA cli, then I've created the base structure of the application including style-guide which was the base to create shared components and document them with JSDoc.
+Then I've implement the structure of application added logic and finaly added some responsivness to application
+
+### Built with
+
+- HTML5
+- CSS
+- Sass
+- Flexbox
+- [React](https://reactjs.org/) - JS library
+- Typescript
+- JSDoc
+- Jest
+
+## Author
+
+- Albert Hovhannisian
+- Email: albert.hovhannisian.main@gmail.com
+- TG: @albert_hov

@@ -1,0 +1,189 @@
+@import './colors.scss';
+@import './sizes.scss';
+@import '../components/shared/Label/index.scss';
+@import '../components/TipCard/index.scss';
+@import '../components/shared/Button/index.scss';
+@import '../components/shared/Input/index.scss';
+
+@import-normalize;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 24px;
+    background-color: $light-grayish-cyan;
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+}
+
+.wrapper {
+    background-color: $white;
+    border-radius: $border-radius-secondary;
+    padding: 32px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fields {
+    width: 50%;
+    margin-right: 25px;
+    &__item {
+        &--tips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 48px;
+            margin-top: 32px;
+        }
+        &--custom {
+            background-color: $light-grayish-cyan;
+            color: $dark-grayish-cyan-2;
+            border-radius: $border-radius-primary;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            input {
+                border: none;
+                outline: none;
+                background-color: $light-grayish-cyan;
+                width: 100%;
+                height: 100%;
+                border-radius: $border-radius-primary;
+                font-size: 24px;
+                font-weight: 500;
+                text-align: center;
+        
+                &:focus-within {
+                    border: 2px solid $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.results {
+    background-color: $dark-grayish-cyan-2;
+    width: 50%;
+    height: 90%;
+    border-radius: $border-radius-primary;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 25px 25px 25px;
+
+    &__item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+
+        &-title {
+            color: $white;
+            margin-bottom: 10px;
+        }
+
+        &-description {
+            color: $dark-grayish-cyan;
+            font-size: 18px;
+        }
+    }
+
+    &__amount {
+        font-size: 48px;
+        color: $primary-color;
+        max-width: 250px;
+        overflow: scroll;
+
+        svg {
+            height: 48px;
+            fill: $primary-color;
+        }
+    }
+
+    .button {
+        width: 80%;
+        position: absolute;
+        bottom: 20px;
+    }
+}
+
+.input-container {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: $mobile) {
+    .container {
+        height: 100%;
+
+        &>svg {
+            margin-bottom: 20px;
+        }
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 18px;
+        flex-direction: column;
+    }
+
+    .fields {
+        width: 100%;
+        margin-right: 0;
+        &__item {
+            &--tips {
+                .tipcard {
+                    width: 47%;
+                    min-width: none;
+                }
+            }
+            &--custom {
+                width: 47%;
+            }
+        }
+    }
+
+    .results {
+        width: 100%;
+        padding: 32px 16px 16px 16px;
+
+        &__text {
+            font-size: 18px;
+        }
+
+        &__amount {
+            font-size: 20px;
+        }
+
+        .button {
+            position: static;
+            width: 100%;
+        }
+    }
+}
